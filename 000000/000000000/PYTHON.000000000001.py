@@ -18,10 +18,10 @@ while Loop:
         volume = math.pi * (radius**2)
         print(f"the volume is {volume}.")
     else:
-        for i in range(0, 10000):
+        for i in range(0, 1000):
             print()
         print(f"ERROR: Unknown option! You put in \"{option}\".")
         time.sleep(1)
-    for i in range(0, 10000):
+    for i in range(0, 1000):
             print()
             
