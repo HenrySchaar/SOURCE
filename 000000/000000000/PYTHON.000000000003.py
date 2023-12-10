@@ -1,15 +1,17 @@
+import numpy
 print("this is double assistant")
-print("""Choose the Number of the Assistan you want to use.
-      1. Circle Assistant
-      2. Satz des Pythagoras Assistant
-""")
-Number = input("Number: ")
-if Number == "1":
-    import math
-    import time
-    print("This is the Circle Assistant")
-    Loop = True
-    while Loop:
+while True:
+    print("""Choose the Number of the Assistan you want to use.
+        1. Circle Assistant
+        2. Satz des Pythagoras Assistant
+    """)
+    Number = input("Number: ")
+    if Number == "1":
+        import math
+        import time
+        print("This is the Circle Assistant")
+        Loop = True
+        
         print("""Please select one of the following options with the keywords below in the []
             1. get the circle circumference [circumference]
             2. get the circle volume [volume]
@@ -31,31 +33,34 @@ if Number == "1":
             time.sleep(1)
         for i in range(0, 1000):
                 print()
-if Number == "2":
-    import math
-    print("This is german!")
-    print("Willkommen zum Satz des Pythagoras Assistenten")
-    print("""Willst du a, b oder c als Ergebnis haben?
-        """)
-    Result = "ERROR: option not found"
-
-    while True:
+    if Number == "2":
+        import math
+        print("This is german!")
+        print("Willkommen zum Satz des Pythagoras Assistenten")
+        print("""Willst du a, b oder c als Ergebnis haben?
+            """)
+        Result = "ERROR: option not found"
         option = input("Option: ").upper()
         if option == "A":
             c = float(input("Was ist der Wert von c: "))
             b = float(input("Was ist der Wert von b: "))
-            a = math.sqrt((c**2) - (b**2))
+            x = c**2 - b**2
+            a = numpy.sqrt(x)
             Result = a
-        if option == "B":
+        elif option == "B":
             c = float(input("Was ist der Wert von c: "))
             a = float(input("Was ist der Wert von a: "))
-            b = math.sqrt((c**2) - (a**2))
+            x = c**2 - a**2
+            b = numpy.sqrt(x)
             Result = b
-        if option == "C":
+        elif option == "C":
             a = float(input("Was ist der Wert von a: "))
             b = float(input("Was ist der Wert von b: "))
-            c = math.sqrt((a**2) + (b**2))
+            x = a**2 + b**2
+            c = numpy.sqrt(x)
             Result = c
+        else:
+            print("Error: Invalid option")
         print(f"The Result is: {Result}")
                 
     

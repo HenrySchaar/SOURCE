@@ -13,10 +13,12 @@ while Loop:
             radius = int(input("What is the circle radius?: "))
             circumference = math.pi * radius * 2
             print(f"The circumference is {circumference}.")
+            time.sleep(5)
     elif option.upper() == "volume".upper():
         radius = int(input("What is the circle radius?: "))
         volume = math.pi * (radius**2)
         print(f"the volume is {volume}.")
+        time.sleep(5)
     else:
         for i in range(0, 1000):
             print()
