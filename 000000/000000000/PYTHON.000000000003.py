@@ -1,7 +1,7 @@
 import numpy
 print("this is double assistant")
 while True:
-    print("""Choose the Number of the Assistan you want to use.
+    print("""Choose the Number of the Assistant you want to use.
         1. Circle Assistant
         2. Satz des Pythagoras Assistant
     """)
@@ -22,10 +22,12 @@ while True:
                 radius = int(input("What is the circle radius?: "))
                 circumference = math.pi * radius * 2
                 print(f"The circumference is {circumference}.")
+                time.sleep(5)
         elif option.upper() == "volume".upper():
             radius = int(input("What is the circle radius?: "))
             volume = math.pi * (radius**2)
             print(f"the volume is {volume}.")
+            time.sleep(5)
         else:
             for i in range(0, 1000):
                 print()
@@ -45,14 +47,20 @@ while True:
             c = float(input("Was ist der Wert von c: "))
             b = float(input("Was ist der Wert von b: "))
             x = c**2 - b**2
-            a = numpy.sqrt(x)
-            Result = a
+            if x < 0:
+                Result = " ERROR: Invalid value!"
+            else:
+                a = numpy.sqrt(x)
+                Result = a
         elif option == "B":
             c = float(input("Was ist der Wert von c: "))
             a = float(input("Was ist der Wert von a: "))
             x = c**2 - a**2
-            b = numpy.sqrt(x)
-            Result = b
+            if x < 0:
+                Result = " ERROR: Invalid value!"
+            else:
+                a = numpy.sqrt(x)
+                Result = a
         elif option == "C":
             a = float(input("Was ist der Wert von a: "))
             b = float(input("Was ist der Wert von b: "))
